@@ -21,9 +21,11 @@ body * {
 }
 
 .profile {
-    display: block;
-    text-align: center;
-    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px
 }
 
 .profile img {
@@ -33,12 +35,12 @@ body * {
 .profile p {
     font-weight: 500;
     line-height: 24px;
-    margin-top: 8px;
 }
-ul {
+.button-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 24px 0 24px
 }
 
 ul li a {
@@ -63,4 +65,12 @@ ul li a {
 ul li a:hover {
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid #ffffff;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    font-size: 24px;
+    padding: 24px;
 }
