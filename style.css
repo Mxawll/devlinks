@@ -5,13 +5,31 @@
     list-style: none;
 }
 
+:root {
+    --text-color: #ffffff;
+    --surface-color: rgba(255, 255, 255, 0.10);
+    --stroke-color: rgba(255, 255, 255, 0.50);
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --highlight-color: rgba(255, 255, 255, 0.20);
+    --surface-color-hover: rgb(255, 255, 255, 0.05);
+}
+
+.light {
+    --text-color: #000;
+    --surface-color: rgba(0, 0, 0, 0.05);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --highlight-color: rgba(0, 0, 0, 0.10);
+    --surface-color-hover: rgb(255, 255, 255, 0.02);
+}
+
 body {
-    background: url(./assets/bg-mobile.jpg) top center/cover no-repeat;
+    background: var(--bg-url) top center/cover no-repeat;
 }
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .container {
@@ -44,14 +62,14 @@ body * {
     padding: 24px 0
 }
 
-ul li a {
+.button-list li a {
     display: flex;
     align-items:center;
     justify-content: center;
 
     padding: 16px 24px;
-    background: rgba(255, 255, 255, 0.10);
-    border: 1px solid rgba(255, 255, 255, 0.50);
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
     border-radius: 8px;
 
     backdrop-filter: blur(4px);
@@ -63,9 +81,9 @@ ul li a {
     transition: background 0.2s;
 }
 
-ul li a:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid #ffffff;
+.button-list li a:hover {
+    background: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
 }
 
 .social-links {
@@ -85,7 +103,7 @@ ul li a:hover {
 }
 
 .social-links a:hover {
-    background: #FFFFFF33;
+    background: var(--highlight-color);
     padding: 16px;
 }
 
