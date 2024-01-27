@@ -1,3 +1,4 @@
+/* reset */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     list-style: none;
 }
 
+/* variables */
 :root {
     --text-color: #ffffff;
     --surface-color: rgba(255, 255, 255, 0.10);
@@ -23,6 +25,8 @@
     --surface-color-hover: rgb(255, 255, 255, 0.02);
 }
 
+/* main */
+
 body {
     background: var(--bg-url) top center/cover no-repeat;
 }
@@ -38,6 +42,7 @@ body * {
     padding: 0 24px;
 }
 
+/* profile */
 .profile {
     display: flex;
     flex-direction: column;
@@ -55,14 +60,16 @@ body * {
     line-height: 24px;
     text-decoration: none;
 }
-.button-list {
+
+/* link list */
+.link-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 24px 0
 }
 
-.button-list li a {
+.link-list li a {
     display: flex;
     align-items:center;
     justify-content: center;
@@ -81,11 +88,12 @@ body * {
     transition: background 0.2s;
 }
 
-.button-list li a:hover {
+.link-list li a:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
 }
 
+/* social links */
 .social-links {
     display: flex;
     justify-content: center;
@@ -107,7 +115,8 @@ body * {
     padding: 16px;
 }
 
-.footer-link {
+/* fotter */
+.footer {
     padding: 24px;
     text-align: center;
     font-size: 14px;
