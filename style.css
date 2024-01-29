@@ -118,7 +118,7 @@ body {
     transition: background 0.2s;
 }
 
-.link:hover {
+.button-link:hover {
     background: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
 }
