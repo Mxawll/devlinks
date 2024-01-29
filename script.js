@@ -1,5 +1,6 @@
 function toggleMode() {
     const html = document.documentElement
+    html.classList.toggle("light")
 
     // if(html.classList.contains("light")) {
     //     html.classList.remove("light")
@@ -7,12 +8,16 @@ function toggleMode() {
     //     html.classList.add("light")
     // }
 
-    html.classList.toggle("light")
 
     const img = document.querySelector(".profile img")
-     if(html.classList.contains("light")) {
-       img.setAttribute("src", "./assets/avatar-light.png")
-    } else {
-        img.setAttribute("src","./assets/avatar.png")
-    }
+    const imgUrl = html.classList.contains("light") 
+        ? "./assets/avatar-light.png" 
+        : "./assets/avatar.png"
+    img.setAttribute("src", imgUrl)
+
+    //  if(html.classList.contains("light")) {
+    //    img.setAttribute("src", "./assets/avatar-light.png")
+    // } else {
+    //     img.setAttribute("src","./assets/avatar.png")
+    // }
 }
