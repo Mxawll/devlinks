@@ -10,14 +10,12 @@ function toggleMode() {
 
 
     const img = document.querySelector(".profile img")
-    const imgUrl = html.classList.contains("light") 
-        ? "./assets/avatar-light.png" 
-        : "./assets/avatar.png"
-    img.setAttribute("src", imgUrl)
 
-    //  if(html.classList.contains("light")) {
-    //    img.setAttribute("src", "./assets/avatar-light.png")
-    // } else {
-    //     img.setAttribute("src","./assets/avatar.png")
-    // }
+     if(html.classList.contains("light")) {
+       img.setAttribute("src", "./assets/avatar-light.png")
+       img.setAttribute("alt","Foto de Max nascimento, usando boné, jaqueta corta vento e segunrando um celular.")
+    } else {
+        img.setAttribute("src","./assets/avatar.png")
+        img.setAttribute("alt","Foto de Max Nascimento, usando boné, relógio e fone de ouvido.")
+    }
 }
