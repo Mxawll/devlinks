@@ -12,10 +12,10 @@ function toggleMode() {
     const img = document.querySelector(".profile img")
 
      if(html.classList.contains("light")) {
-       img.setAttribute("src", "./assets/avatar-light.png")
+       img.setAttribute("src", "./assets/avatar.png")
        img.setAttribute("alt","Foto de Max nascimento, usando boné, jaqueta corta vento e segunrando um celular.")
     } else {
-        img.setAttribute("src","./assets/avatar.png")
+        img.setAttribute("src","./assets/avatar-dark.png")
         img.setAttribute("alt","Foto de Max Nascimento, usando boné, relógio e fone de ouvido.")
     }
 }
