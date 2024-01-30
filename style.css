@@ -78,10 +78,15 @@ body {
     background: #fff var(--switch-bg-url) no-repeat center;
     position: absolute;
     z-index: 1;
+    animation: slide-out 0.4s;
+    transition: outline 0.1s;
+}
+.button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 .light .button {
-    right: 0;
+    animation: slide-in 0.4s forwards;
 }
 
 .track {
@@ -162,5 +167,24 @@ footer {
 
     .light {
         --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
+
+/* animation */
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 50%;
+    }
+    to {
+        left: 0;
     }
 }
